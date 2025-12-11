@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-SG" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- SEO BASICS -->
+<title>FreePropertySG — Free Property Listings in Singapore</title>
+<meta name="description" content="Singapore’s free property listing platform. Browse HDB, condo, and landed properties. No agent fees. No listing fees. 100% free to post and view.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://freepropertysg.com/">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico">
+
+<!-- External CSS -->
+<link rel="stylesheet" href="/assets/style.css">
+
+<!-- ✅ FreePropertySG Schema (Business) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://freepropertysg.com/#organization",
+  "name": "FreePropertySG",
+  "url": "https://freepropertysg.com",
+  "logo": "https://freepropertysg.com/assets/og-default.png",
+  "description": "FreePropertySG is Singapore’s 100% free-to-use property listing platform for HDB, condo, and landed properties. No agent fees, no listing fees.",
+  "email": "info@freepropertysg.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "SG",
+    "addressRegion": "Singapore",
+    "addressLocality": "Singapore"
+  }
+}
+</script>
+
+<!-- Website Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://freepropertysg.com/#website",
+  "url": "https://freepropertysg.com",
+  "name": "FreePropertySG"
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://freepropertysg.com/"
+    }
+  ]
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">FreePropertySG</a>
+    <span class="menu-toggle">☰</span>
+    <ul class="nav-menu">
+      <li><a href="/">HOME</a></li>
+      <li><a href="/about">ABOUT</a></li>
+      <li><a href="/listings">LISTINGS</a></li>
+      <li><a href="/blog">BLOG</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ACTIVE LINK SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".nav-menu a");
+  const current = window.location.pathname;
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+<!-- MAIN LANDMARK -->
+<main>
+
+<!-- HEADER -->
+<header class="hero">
+  <h1>Free Property Listings in Singapore</h1>
+  <p>Browse free HDB, Condo, and Landed listings — no agent fees, no listing fees.</p>
+  <p><strong>Email us to list your property for free: info@freepropertysg.com</strong></p>
+</header>
+
+<!-- FEATURED LISTINGS -->
+<div class="content-container">
+
+<h2>Featured Listings</h2>
+
+<!-- 1 -->
+<div class="listing-box">
+  <div class="listing-title">HDB 4-Room | Jurong East | $480,000</div>
+  <div class="listing-meta">5 mins to MRT • Renovated • Mid-floor • Open view</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 2 -->
+<div class="listing-box">
+  <div class="listing-title">Condo 2BR | Punggol | $720,000</div>
+  <div class="listing-meta">High floor • Full condo facilities • Ready to move in</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 3 -->
+<div class="listing-box">
+  <div class="listing-title">3-Room HDB | Yishun | $360,000</div>
+  <div class="listing-meta">Bright unit • Near Northpoint • Move-in condition</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 4 -->
+<div class="listing-box">
+  <div class="listing-title">Executive Maisonette | Tampines | $880,000</div>
+  <div class="listing-meta">Spacious layout • Near MRT • Rare EM unit</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 5 -->
+<div class="listing-box">
+  <div class="listing-title">Landed Terrace | Hougang | $1.98M</div>
+  <div class="listing-meta">Freehold • 2-storey • Quiet neighbourhood</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  © <span id="year"></span> FreePropertySG — Singapore’s Free Property Portal  
+  <br>
+  Last updated: <span id="lastUpdated"></span>
+</footer>
+
+<!-- YEAR + DATE AUTO -->
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString("en-SG", {
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+});
+</script>
+
+<!-- MOBILE MENU SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".nav-menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+});
+</script>
+
+</body>
+</html>
