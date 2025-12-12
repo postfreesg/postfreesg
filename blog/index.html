@@ -6,7 +6,7 @@
 
 <!-- SEO BASICS -->
 <title>PostFreeSG Blog — Singapore Insights & Guides</title>
-<meta name="description" content="Singapore insights blog covering property, rentals, renovation, jobs, services, buying/selling tips, and local market guides. Learn and explore — 100% free.">
+<meta name="description" content="Singapore insights blog covering buying & selling tips, jobs, services, rentals, renovation, pricing guides, and marketplace essentials. Learn and explore — 100% free.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://postfreesg.com/blog/">
 
@@ -45,41 +45,63 @@
 
 <h2>Blog Categories</h2>
 
-<!-- CATEGORY: Property Blog & Insights -->
+<!-- CATEGORY: BUY & SELL GUIDES -->
 <section class="blog-section">
-  <h3>🏘️ <span class="section-number"></span> Property Blog & Insights</h3>
+  <h3>🛍️ <span class="section-number"></span> Buy & Sell Guides</h3>
   <ul class="blog-list">
-    <li><a href="/blog/parc-clematis">Parc Clematis</a></li>
-    <li><a href="/blog/high-park-residences">High Park Residences</a></li>
-    <li><a href="/blog/the-trilinq">The Trilinq</a></li>
+    <li><a href="/blog/how-to-sell-fast-singapore">How to Sell Fast in Singapore</a></li>
+    <li><a href="/blog/secondhand-pricing-guide">Secondhand Pricing Guide</a></li>
+    <li><a href="/blog/item-description-tips">How to Write a Good Listing Description</a></li>
   </ul>
 </section>
 
-<!-- CATEGORY: INVESTMENT -->
+<!-- CATEGORY: JOBS & FREELANCE -->
 <section class="blog-section">
-  <h3>📈 <span class="section-number"></span> Property Investment</h3>
+  <h3>💼 <span class="section-number"></span> Jobs & Freelance Work</h3>
   <ul class="blog-list">
-    <li><a href="/blog/rental-yield-calculator-singapore">Rental Yield Calculator Singapore</a></li>
-    <li><a href="/blog/absd-singapore">ABSD Singapore</a></li>
-    <li><a href="/blog/real-estate-investment-singapore">Real Estate Investment Singapore</a></li>
+    <li><a href="/blog/how-to-find-part-time-jobs">How to Find Part-Time Jobs in Singapore</a></li>
+    <li><a href="/blog/freelancer-rate-guide">Freelancer Rate Guide Singapore</a></li>
+    <li><a href="/blog/home-based-jobs-singapore">Home-Based Jobs Singapore</a></li>
   </ul>
 </section>
 
-<!-- CATEGORY: RENOVATION -->
+<!-- CATEGORY: SERVICES & SMALL BUSINESS -->
 <section class="blog-section">
-  <h3>🧱 <span class="section-number"></span> Renovation</h3>
+  <h3>🧰 <span class="section-number"></span> Services & Small Business</h3>
   <ul class="blog-list">
-    <li><a href="/blog/toilet-renovation-package">Toilet Renovation Package</a></li>
-    <li><a href="/blog/kitchen-renovation-package-price">Kitchen Renovation Package Price</a></li>
+    <li><a href="/blog/how-to-start-side-hustle">How to Start a Side Hustle in Singapore</a></li>
+    <li><a href="/blog/home-service-prices">Home Service Price Guide (AC, Plumbing, Cleaning)</a></li>
+    <li><a href="/blog/how-to-get-more-service-clients">How to Get More Clients for Your Service Business</a></li>
   </ul>
 </section>
 
-<!-- CATEGORY: TIPS -->
+<!-- CATEGORY: HOUSING, RENTAL & LIVING -->
 <section class="blog-section">
-  <h3>💡 <span class="section-number"></span> Home & Property Tips</h3>
+  <h3>🏠 <span class="section-number"></span> Housing, Rental & Living</h3>
   <ul class="blog-list">
-    <li><a href="/blog/property-agent-commission">Property Agent Commission</a></li>
-    <li><a href="/blog/srx-x-value">SRX X-Value</a></li>
+    <li><a href="/blog/room-rental-guide-singapore">Room Rental Guide Singapore</a></li>
+    <li><a href="/blog/moving-house-checklist">Moving House Checklist</a></li>
+    <li><a href="/blog/cheap-renovation-tips">Cheap Renovation Tips for Small Homes</a></li>
+  </ul>
+</section>
+
+<!-- CATEGORY: MONEY & SAVING -->
+<section class="blog-section">
+  <h3>💰 <span class="section-number"></span> Money, Saving & Budgeting</h3>
+  <ul class="blog-list">
+    <li><a href="/blog/how-to-save-money-singapore">How to Save Money in Singapore</a></li>
+    <li><a href="/blog/best-budget-grocery-options">Best Budget Grocery Options in Singapore</a></li>
+    <li><a href="/blog/car-ownership-cost-singapore">Cost of Owning a Car in Singapore</a></li>
+  </ul>
+</section>
+
+<!-- CATEGORY: SINGAPORE GUIDES & ESSENTIALS -->
+<section class="blog-section">
+  <h3>📘 <span class="section-number"></span> Singapore Guides & Essentials</h3>
+  <ul class="blog-list">
+    <li><a href="/blog/singapore-public-holidays">Singapore Public Holidays Guide</a></li>
+    <li><a href="/blog/how-to-understand-singapore-addresses">How to Understand Singapore Addresses (Blk, #, Units)</a></li>
+    <li><a href="/blog/singapore-transport-beginners-guide">Beginner’s Guide to Singapore Transport</a></li>
   </ul>
 </section>
 
@@ -113,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
     posts.forEach((post, postIndex) => {
       const postNumber = `${sectionNumber}.${postIndex + 1} `;
 
-      // Prevent double numbering if script runs again
+      // Prevent double numbering
       if (!post.textContent.match(/^\d+\.\d+/)) {
         post.textContent = postNumber + post.textContent;
       }
