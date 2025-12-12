@@ -1,3 +1,4 @@
+
 /* =======================================================
    Base Styles
 ======================================================= */
@@ -183,4 +184,15 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #555;
+}
+
+/* BLOG LINK HOVER COLOR */
+.blog-list a {
+  color: #333;                 /* normal text colour (adjust if needed) */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.blog-list a:hover {
+  color: #ff6a00;              /* your requested hover colour */
 }
