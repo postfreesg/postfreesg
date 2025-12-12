@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navHTML = `
 <nav class="navbar">
   <div class="nav-container">
-    <a href="/" class="nav-logo">FreePropertySG</a>
+    <a href="/" class="nav-logo">PostFreeSG</a>
     <span class="menu-toggle">☰</span>
     <ul class="nav-menu">
       <li><a href="/">HOME</a></li>
