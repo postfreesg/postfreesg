@@ -1,4 +1,19 @@
+/assets/schema-generator.js
+  X-Robots-Tag: noindex, nofollow
+  Access-Control-Allow-Origin: https://postfreesg.com
+  Referrer-Policy: same-origin
+
 /assets/header.js
+  X-Robots-Tag: noindex, nofollow
+  Access-Control-Allow-Origin: https://postfreesg.com
+  Referrer-Policy: same-origin
+
+/assets/hero.js
+  X-Robots-Tag: noindex, nofollow
+  Access-Control-Allow-Origin: https://postfreesg.com
+  Referrer-Policy: same-origin
+
+/assets/scripts.js
   X-Robots-Tag: noindex, nofollow
   Access-Control-Allow-Origin: https://postfreesg.com
   Referrer-Policy: same-origin
