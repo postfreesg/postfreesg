@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-SG" dir="ltr">
 <head>
@@ -15,96 +16,22 @@
 
 <!-- External CSS -->
 <link rel="stylesheet" href="/assets/style.css">
-
-<!-- ✅ FreePropertySG Schema (Business) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://freepropertysg.com/#organization",
-  "name": "FreePropertySG",
-  "url": "https://freepropertysg.com",
-  "logo": "https://freepropertysg.com/assets/og-default.png",
-  "description": "FreePropertySG is Singapore’s 100% free-to-use property listing platform for HDB, condo, and landed properties. No agent fees, no listing fees.",
-  "email": "info@freepropertysg.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "SG",
-    "addressRegion": "Singapore",
-    "addressLocality": "Singapore"
-  }
-}
-</script>
-
-<!-- Website Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://freepropertysg.com/#website",
-  "url": "https://freepropertysg.com",
-  "name": "FreePropertySG"
-}
-</script>
-
-<!-- Breadcrumb Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://freepropertysg.com/"
-    }
-  ]
-}
-</script>
-
+<link rel="sitemap" type="application/xml" href="https://freepropertysg.com/sitemap.xml" />
+<script defer src="/assets/schema-generator.js"></script>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="/" class="nav-logo">FreePropertySG</a>
-    <span class="menu-toggle">☰</span>
-    <ul class="nav-menu">
-      <li><a href="/">HOME</a></li>
-      <li><a href="/about">ABOUT</a></li>
-      <li><a href="/listings">LISTINGS</a></li>
-      <li><a href="/blog">BLOG</a></li>
-      <li><a href="/contact">CONTACT</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- ACTIVE LINK SCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll(".nav-menu a");
-  const current = window.location.pathname;
-
-  links.forEach(link => {
-    if (link.getAttribute("href") === current) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
-
+<!-- NAVIGATION (CENTRALISED) -->
+<div id="site-nav"></div>
+<script src="/assets/header.js"></script>
+  
 <!-- MAIN LANDMARK -->
 <main>
 
-<!-- HEADER -->
-<header class="hero">
-  <h1>Free Property Listings in Singapore</h1>
-  <p>Browse free HDB, Condo, and Landed listings — no agent fees, no listing fees.</p>
-  <p><strong>Email us to list your property for free: info@freepropertysg.com</strong></p>
-</header>
+<!-- HERO (CENTRALISED) -->
+<div id="hero"></div>
+<script src="/assets/hero.js"></script>
 
 <!-- FEATURED LISTINGS -->
 <div class="content-container">
@@ -149,34 +76,13 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 </main>
 
+<!-- Global Ads & Analytics -->
+<div id="site-ad"></div>
+<script src="/assets/scripts.js"></script>
+  
 <!-- FOOTER -->
-<footer>
-  © <span id="year"></span> FreePropertySG — Singapore’s Free Property Portal  
-  <br>
-  Last updated: <span id="lastUpdated"></span>
-</footer>
-
-<!-- YEAR + DATE AUTO -->
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString("en-SG", {
-  year: "numeric",
-  month: "long",
-  day: "numeric"
-});
-</script>
-
-<!-- MOBILE MENU SCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".nav-menu");
-
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
-});
-</script>
+<div id="site-footer"></div>
+<script src="/assets/footer.js"></script>
 
 </body>
 </html>
