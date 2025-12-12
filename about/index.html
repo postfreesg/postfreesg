@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-SG" dir="ltr">
 <head>
@@ -15,65 +16,22 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="/assets/style.css">
-
-<!-- About Page Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "About FreePropertySG",
-  "url": "https://freepropertysg.com/about",
-  "description": "FreePropertySG is Singapore’s 100% free-to-use property listing platform, providing a simple way to browse and post HDB, condo, and landed listings.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "FreePropertySG",
-    "url": "https://freepropertysg.com",
-    "logo": "https://freepropertysg.com/assets/og-default.png"
-  }
-}
-</script>
-
+<link rel="sitemap" type="application/xml" href="https://freepropertysg.com/sitemap.xml" />
+<script defer src="/assets/schema-generator.js"></script>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="/" class="nav-logo">FreePropertySG</a>
-    <span class="menu-toggle">☰</span>
-    <ul class="nav-menu">
-      <li><a href="/">HOME</a></li>
-      <li><a href="/about">ABOUT</a></li>
-      <li><a href="/listings">LISTINGS</a></li>
-      <li><a href="/blog">BLOG</a></li>
-      <li><a href="/contact">CONTACT</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- ACTIVE LINK HIGHLIGHT (FIXED FOR TRAILING SLASH) -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const current = window.location.pathname.replace(/\/$/, "");
-  const links = document.querySelectorAll(".nav-menu a");
-
-  links.forEach(link => {
-    const linkPath = link.getAttribute("href").replace(/\/$/, "");
-    if (linkPath === current) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
+<!-- NAVIGATION (CENTRALISED) -->
+<div id="site-nav"></div>
+<script src="/assets/header.js"></script>  
 
 <!-- MAIN -->
 <main>
 
-<header class="hero">
-  <h1>About FreePropertySG</h1>
-  <p>Singapore’s fully free property listing platform for everyone.</p>
-</header>
+<!-- HERO (CENTRALISED) -->
+<div id="hero"></div>
+<script src="/assets/hero.js"></script>
 
 <div class="content-container">
 
@@ -109,31 +67,13 @@ Have questions or want to list your property for free?<br>
 
 </main>
 
+<!-- Global Ads & Analytics -->
+<div id="site-ad"></div>
+<script src="/assets/scripts.js"></script>
+  
 <!-- FOOTER -->
-<footer>
-  © <span id="year"></span> FreePropertySG — Singapore’s Free Property Portal  
-  <br>
-  Last updated: <span id="lastUpdated"></span>
-</footer>
-
-<!-- YEAR + DATE -->
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString("en-SG", {
-  year: "numeric", month: "long", day: "numeric"
-});
-</script>
-
-<!-- MOBILE MENU -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".nav-menu");
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
-});
-</script>
+<div id="site-footer"></div>
+<script src="/assets/footer.js"></script>
 
 </body>
 </html>
