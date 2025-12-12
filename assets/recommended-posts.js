@@ -71,15 +71,15 @@ document.addEventListener("DOMContentLoaded", () => {
   ---------------------------------------- */
   (async function () {
     try {
-      // FIXED — fetch from the correct domain
-      const res = await fetch("https://freepropertysg.com/blog/");
+      // UPDATED — fetch from PostFreeSG
+      const res = await fetch("https://postfreesg.com/blog/");
       const html = await res.text();
       const doc = new DOMParser().parseFromString(html, "text/html");
 
       // Extract blog links
       const posts = [...doc.querySelectorAll("a[href^='/blog/']")].map(a => ({
         title: a.textContent.trim(),
-        url: ("https://freepropertysg.com" + a.getAttribute("href")).replace(/\/$/, "")
+        url: ("https://postfreesg.com" + a.getAttribute("href")).replace(/\/$/, "")
       }));
 
       const currentURL = window.location.href.replace(/\/$/, "");
