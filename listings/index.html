@@ -15,49 +15,22 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="/assets/style.css">
-
+<link rel="sitemap" type="application/xml" href="https://freepropertysg.com/sitemap.xml" />
+<script defer src="/assets/schema-generator.js"></script>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="/" class="nav-logo">FreePropertySG</a>
-    <span class="menu-toggle">☰</span>
-    <ul class="nav-menu">
-      <li><a href="/">HOME</a></li>
-      <li><a href="/about">ABOUT</a></li>
-      <li><a href="/listings">LISTINGS</a></li>
-      <li><a href="/blog">BLOG</a></li>
-      <li><a href="/contact">CONTACT</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- ACTIVE LINK SCRIPT (Trailing slash safe) -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const current = window.location.pathname.replace(/\/$/, "");
-  const links = document.querySelectorAll(".nav-menu a");
-
-  links.forEach(link => {
-    const linkPath = link.getAttribute("href").replace(/\/$/, "");
-    if (linkPath === current) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
-
+<!-- NAVIGATION (CENTRALISED) -->
+<div id="site-nav"></div>
+<script src="/assets/header.js"></script>
+  
 <!-- MAIN -->
 <main>
 
-<header class="hero">
-  <h1>All Property Listings</h1>
-  <p>Browse free HDB, Condo, and Landed listings across Singapore.</p>
-  <p><strong>To list your property for free, email: info@freepropertysg.com</strong></p>
-</header>
+<!-- HERO (CENTRALISED) -->
+<div id="hero"></div>
+<script src="/assets/hero.js"></script>
 
 <div class="content-container">
 
@@ -136,27 +109,13 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 </main>
 
+<!-- Global Ads & Analytics -->
+<div id="site-ad"></div>
+<script src="/assets/scripts.js"></script>
+  
 <!-- FOOTER -->
-<footer id="site-footer"></footer>
-<script>
-fetch("/assets/footer.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("site-footer").innerHTML = html;
-  });
-</script>
-
-<!-- MOBILE MENU -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".nav-menu");
-
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
-});
-</script>
+<div id="site-footer"></div>
+<script src="/assets/footer.js"></script>
 
 </body>
 </html>
