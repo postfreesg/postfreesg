@@ -15,72 +15,22 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="/assets/style.css">
-
-<!-- 📌 Contact Page Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact FreePropertySG",
-  "url": "https://freepropertysg.com/contact",
-  "description": "Get in touch with FreePropertySG for enquiries or property listing support.",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "FreePropertySG",
-    "url": "https://freepropertysg.com",
-    "logo": "https://freepropertysg.com/assets/og-default.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Support",
-      "email": "info@freepropertysg.com",
-      "areaServed": "SG",
-      "availableLanguage": ["English"]
-    }
-  }
-}
-</script>
-
+<link rel="sitemap" type="application/xml" href="https://freepropertysg.com/sitemap.xml" />
+<script defer src="/assets/schema-generator.js"></script>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="/" class="nav-logo">FreePropertySG</a>
-    <span class="menu-toggle">☰</span>
-    <ul class="nav-menu">
-      <li><a href="/">HOME</a></li>
-      <li><a href="/about">ABOUT</a></li>
-      <li><a href="/listings">LISTINGS</a></li>
-      <li><a href="/blog">BLOG</a></li>
-      <li><a href="/contact">CONTACT</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- ACTIVE LINK SCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const current = window.location.pathname.replace(/\/$/, "");
-  const links = document.querySelectorAll(".nav-menu a");
-
-  links.forEach(link => {
-    const linkPath = link.getAttribute("href").replace(/\/$/, "");
-    if (linkPath === current) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
+<!-- NAVIGATION (CENTRALISED) -->
+<div id="site-nav"></div>
+<script src="/assets/header.js"></script>
 
 <!-- MAIN CONTENT -->
 <main>
 
-<header class="hero">
-  <h1>Contact Us</h1>
-  <p>Have questions or want to list your property for free? We’re here to help.</p>
-</header>
+<!-- HERO (CENTRALISED) -->
+<div id="hero"></div>
+<script src="/assets/hero.js"></script>
 
 <div class="content-container">
 
@@ -101,28 +51,14 @@ You can contact us directly anytime. Our team typically responds within 24 hours
 </div>
 
 </main>
-
+  
+<!-- Global Ads & Analytics -->
+<div id="site-ad"></div>
+<script src="/assets/scripts.js"></script>
+  
 <!-- FOOTER -->
-<footer id="site-footer"></footer>
-<script>
-fetch("/assets/footer.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("site-footer").innerHTML = html;
-  });
-</script>
-
-<!-- MOBILE MENU -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".nav-menu");
-
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
-});
-</script>
+<div id="site-footer"></div>
+<script src="/assets/footer.js"></script>
 
 </body>
 </html>
