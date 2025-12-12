@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-SG" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- SEO BASICS -->
+<title>Property Listings — FreePropertySG</title>
+<meta name="description" content="Browse all free property listings in Singapore. HDB, condo, and landed homes — 100% free to post and view.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://freepropertysg.com/listings">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/style.css">
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">FreePropertySG</a>
+    <span class="menu-toggle">☰</span>
+    <ul class="nav-menu">
+      <li><a href="/">HOME</a></li>
+      <li><a href="/about">ABOUT</a></li>
+      <li><a href="/listings">LISTINGS</a></li>
+      <li><a href="/blog">BLOG</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ACTIVE LINK SCRIPT (Trailing slash safe) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const current = window.location.pathname.replace(/\/$/, "");
+  const links = document.querySelectorAll(".nav-menu a");
+
+  links.forEach(link => {
+    const linkPath = link.getAttribute("href").replace(/\/$/, "");
+    if (linkPath === current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+<!-- MAIN -->
+<main>
+
+<header class="hero">
+  <h1>All Property Listings</h1>
+  <p>Browse free HDB, Condo, and Landed listings across Singapore.</p>
+  <p><strong>To list your property for free, email: info@freepropertysg.com</strong></p>
+</header>
+
+<div class="content-container">
+
+<h2>Latest Listings</h2>
+
+<!-- 1 -->
+<div class="listing-box">
+  <div class="listing-title">HDB 4-Room | Jurong East | $480,000</div>
+  <div class="listing-meta">5 mins to MRT • Renovated • Mid-floor • Open view</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 2 -->
+<div class="listing-box">
+  <div class="listing-title">Condo 2BR | Punggol | $720,000</div>
+  <div class="listing-meta">High floor • Full condo facilities • Ready to move in</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 3 -->
+<div class="listing-box">
+  <div class="listing-title">3-Room HDB | Yishun | $360,000</div>
+  <div class="listing-meta">Bright unit • Near Northpoint • Move-in condition</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 4 -->
+<div class="listing-box">
+  <div class="listing-title">Executive Maisonette | Tampines | $880,000</div>
+  <div class="listing-meta">Spacious layout • Near MRT • Rare EM unit</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 5 -->
+<div class="listing-box">
+  <div class="listing-title">Landed Terrace | Hougang | $1.98M</div>
+  <div class="listing-meta">Freehold • 2-storey • Quiet neighbourhood</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 6 -->
+<div class="listing-box">
+  <div class="listing-title">HDB 5-Room | Woodlands | $520,000</div>
+  <div class="listing-meta">Corner unit • Spacious • Near Causeway Point</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 7 -->
+<div class="listing-box">
+  <div class="listing-title">Condo 1BR | Sengkang | $530,000</div>
+  <div class="listing-meta">Pool view • Modern design • Move-in ready</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 8 -->
+<div class="listing-box">
+  <div class="listing-title">HDB 3-Room | Ang Mo Kio | $385,000</div>
+  <div class="listing-meta">Near MRT • High floor • Bright and breezy</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 9 -->
+<div class="listing-box">
+  <div class="listing-title">Cluster House | Pasir Ris | $1.45M</div>
+  <div class="listing-meta">3-storey • Quiet enclave • Modern interior</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+<!-- 10 -->
+<div class="listing-box">
+  <div class="listing-title">Condo 3BR | Bukit Batok | $890,000</div>
+  <div class="listing-meta">Near MRT • Renovated • Full facilities</div>
+  <div class="contact-line">📩 Email to enquire: info@freepropertysg.com</div>
+</div>
+
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer id="site-footer"></footer>
+<script>
+fetch("/assets/footer.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("site-footer").innerHTML = html;
+  });
+</script>
+
+<!-- MOBILE MENU -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".nav-menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+});
+</script>
+
+</body>
+</html>

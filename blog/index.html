@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-SG" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- SEO BASICS -->
+<title>FreePropertySG Blog — Singapore Property Insights</title>
+<meta name="description" content="Singapore property blog featuring HDB, condo, landed, rental, renovation, and investment insights. Learn and explore the property market for free.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://freepropertysg.com/blog/">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico">
+
+<!-- External CSS -->
+<link rel="stylesheet" href="/assets/style.css">
+
+<!-- JSON-LD: Blog Collection Page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://freepropertysg.com/blog/#collection",
+  "name": "FreePropertySG Blog",
+  "url": "https://freepropertysg.com/blog",
+  "description": "Singapore property blog featuring free insights on HDB, condo, rental, renovation, market trends and investment tips.",
+  "isPartOf": {
+    "@id": "https://freepropertysg.com/#website"
+  }
+}
+</script>
+
+<!-- Website Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://freepropertysg.com/#website",
+  "url": "https://freepropertysg.com",
+  "name": "FreePropertySG"
+}
+</script>
+
+<!-- Breadcrumbs -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://freepropertysg.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://freepropertysg.com/blog/"
+    }
+  ]
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION (same as homepage) -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">FreePropertySG</a>
+    <span class="menu-toggle">☰</span>
+    <ul class="nav-menu">
+      <li><a href="/">HOME</a></li>
+      <li><a href="/about">ABOUT</a></li>
+      <li><a href="/listings">LISTINGS</a></li>
+      <li><a href="/blog">BLOG</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ACTIVE LINK SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const current = window.location.pathname.replace(/\/$/, "");
+  const links = document.querySelectorAll(".nav-menu a");
+
+  links.forEach(link => {
+    const linkPath = link.getAttribute("href").replace(/\/$/, "");
+    if (linkPath === current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+<!-- MAIN SECTION -->
+<main>
+
+<header class="hero">
+  <h1>FreePropertySG Blog</h1>
+  <p>Free property market insights — HDB, Condo, Landed, Rental, Renovation & Investment Guides.</p>
+  <p><strong>Got a topic request? Email us: info@freepropertysg.com</strong></p>
+</header>
+
+<div class="content-container">
+
+<h2>Blog Categories</h2>
+
+<!-- CATEGORY: HDB -->
+<section class="blog-section">
+  <h3>🏠 HDB Guides</h3>
+  <ul class="blog-list">
+    <li><a href="/blog/hdb-resale-guide.html">HDB Resale Guide</a></li>
+    <li><a href="/blog/hdb-grants-singapore.html">HDB Grants Singapore</a></li>
+    <li><a href="/blog/hdb-renovation-cost.html">HDB Renovation Cost</a></li>
+  </ul>
+</section>
+
+<!-- CATEGORY: CONDO -->
+<section class="blog-section">
+  <h3>🏢 Condo</h3>
+  <ul class="blog-list">
+    <li><a href="/blog/condo-buying-guide.html">Condo Buying Guide</a></li>
+    <li><a href="/blog/new-launch-condos.html">New Launch Condos Singapore</a></li>
+  </ul>
+</section>
+
+<!-- CATEGORY: RENTAL -->
+<section class="blog-section">
+  <h3>🔑 Rental</h3>
+  <ul class="blog-list">
+    <li><a href="/blog/tenant-guide-singapore.html">Tenant Guide Singapore</a></li>
+    <li><a href="/blog/landlord-guide-singapore.html">Landlord Guide Singapore</a></li>
+    <li><a href="/blog/rental-market-singapore.html">Rental Market Singapore</a></li>
+  </ul>
+</section>
+
+<!-- CATEGORY: INVESTMENT -->
+<section class="blog-section">
+  <h3>📈 Property Investment</h3>
+  <ul class="blog-list">
+    <li><a href="/blog/property-yield-singapore.html">Property Rental Yield Singapore</a></li>
+    <li><a href="/blog/absd-rules.html">ABSD Rules Singapore</a></li>
+    <li><a href="/blog/property-investment-beginners.html">Property Investment for Beginners</a></li>
+  </ul>
+</section>
+
+<!-- CATEGORY: RENOVATION -->
+<section class="blog-section">
+  <h3>🧱 Renovation</h3>
+  <ul class="blog-list">
+    <li><a href="/blog/kitchen-renovation-singapore.html">Kitchen Renovation Singapore</a></li>
+    <li><a href="/blog/toilet-renovation-cost.html">Toilet Renovation Cost</a></li>
+  </ul>
+</section>
+
+<!-- CATEGORY: TIPS -->
+<section class="blog-section">
+  <h3>💡 Property Tips</h3>
+  <ul class="blog-list">
+    <li><a href="/blog/property-agent-fees.html">Property Agent Fees Singapore</a></li>
+    <li><a href="/blog/how-to-price-your-property.html">How to Price Your Property</a></li>
+  </ul>
+</section>
+
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="site-footer"></footer>
+<script>
+fetch("/assets/footer.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("site-footer").innerHTML = html;
+  });
+</script>
+
+<!-- MOBILE MENU SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".nav-menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+});
+</script>
+
+</body>
+</html>
