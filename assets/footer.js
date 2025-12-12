@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerHTML = `
 <footer style="text-align:center; font-size:0.9rem;">
   <p style="margin:0.2rem 0;">
-    © <span id="copyYear"></span> FreePropertySG — Singapore’s Free Property Portal 
+    © <span id="copyYear"></span> PostFreeSG — Singapore’s Free Classifieds Platform
   </p>
   
   <p style="margin:0.2rem 0;">
