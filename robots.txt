@@ -1,0 +1,80 @@
+# ===============================
+# ✅ Allow all major search engines
+# ===============================
+
+User-agent: Googlebot
+Disallow: /assets/footer.html
+
+User-agent: Bingbot
+Disallow:
+
+User-agent: Slurp
+Disallow:
+
+User-agent: DuckDuckBot
+Disallow:
+
+User-agent: Baiduspider
+Disallow:
+
+
+# ===============================
+# 🚫 Block AI bots & known scrapers
+# ===============================
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+
+# ===============================
+# 🧭 Sitemap Location
+# ===============================
+
+Sitemap: https://freepropertysg.com/sitemap.xml
+
+
+# ===============================
+# ✅ Default rule — allow everyone else
+# ===============================
+
+User-agent: *
+Disallow:

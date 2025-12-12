@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page Not Found – Redirecting</title>
+  <meta name="robots" content="noindex" />
+  <meta http-equiv="refresh" content="3; url=https://freepropertysg.com/" />
+  <link rel="icon" href="https://freepropertysg.com/assets/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://freepropertysg.com/" />
+
+  <script>
+    let seconds = 3;
+    function updateCountdown() {
+      const counter = document.getElementById("countdown");
+      if (seconds > 0) {
+        counter.textContent = seconds;
+        seconds--;
+        setTimeout(updateCountdown, 1000);
+      }
+    }
+    window.onload = updateCountdown;
+  </script>
+</head>
+
+<body style="font-family: Arial, sans-serif; text-align: center; padding: 60px;">
+  <h1>Oops! Page Not Found</h1>
+  <p>This page doesn’t exist.<br>You’ll be redirected to our homepage in 
+    <strong><span id="countdown">3</span> seconds</strong>.
+  </p>
+  <p><a href="https://freepropertysg.com/">Click here if you're not redirected automatically.</a></p>
+</body>
+</html>
