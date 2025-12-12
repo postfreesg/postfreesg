@@ -25,7 +25,6 @@
   padding-left: 0;
 }
 </style>
-
 </head>
 
 <body>
@@ -33,7 +32,7 @@
 <!-- NAVIGATION (CENTRALISED) -->
 <div id="site-nav"></div>
 <script src="/assets/header.js"></script>
-  
+
 <!-- MAIN SECTION -->
 <main>
 
@@ -43,26 +42,28 @@
 
 <div class="content-container">
 
-<h2>Blog Categories</h2>
+<h2>Blog</h2>
 
-<!-- CATEGORY: GUIDES & TIPS -->
 <section class="blog-section">
-  <h3>🛍️ <span class="section-number"></span> Guides & Tips</h3>
-  <ul class="blog-list">
-    <li><a href="/blog/how-to-sell-fast-singapore">How to Sell Fast in Singapore</a></li>
-    <li><a href="/blog/secondhand-pricing-guide">Secondhand Pricing Guide</a></li>
-    <li><a href="/blog/item-description-tips">How to Write a Good Listing Description</a></li>
-  </ul>
+
+<!-- BLOG-LIST-START -->
+<ul class="blog-list">
+  <li><a href="/blog/how-to-sell-fast-singapore">How to Sell Fast in Singapore</a></li>
+  <li><a href="/blog/secondhand-pricing-guide">Secondhand Pricing Guide</a></li>
+  <li><a href="/blog/item-description-tips">How to Write a Good Listing Description</a></li>
+</ul>
+<!-- BLOG-LIST-END -->
+
 </section>
 
 </div>
 
 </main>
-  
+
 <!-- Global Ads & Analytics -->
 <div id="site-ad"></div>
 <script src="/assets/scripts.js"></script>
-  
+
 <!-- FOOTER -->
 <div id="site-footer"></div>
 <script src="/assets/footer.js"></script>
@@ -70,26 +71,12 @@
 <!-- AUTO NUMBERING SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll(".blog-section");
+  const links = document.querySelectorAll(".blog-list li a");
 
-  sections.forEach((section, sectionIndex) => {
-    const sectionNumber = sectionIndex + 1;
-
-    // Insert section number
-    const span = section.querySelector(".section-number");
-    if (span) span.textContent = sectionNumber + ". ";
-
-    // Auto-number posts inside each section
-    const posts = section.querySelectorAll("ul.blog-list li a");
-
-    posts.forEach((post, postIndex) => {
-      const postNumber = `${sectionNumber}.${postIndex + 1} `;
-
-      // Prevent double numbering
-      if (!post.textContent.match(/^\d+\.\d+/)) {
-        post.textContent = postNumber + post.textContent;
-      }
-    });
+  links.forEach((link, index) => {
+    if (!link.textContent.match(/^\d+\.\s/)) {
+      link.textContent = (index + 1) + ". " + link.textContent;
+    }
   });
 });
 </script>
