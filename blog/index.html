@@ -15,181 +15,109 @@
 
 <!-- External CSS -->
 <link rel="stylesheet" href="/assets/style.css">
+<link rel="sitemap" type="application/xml" href="https://freepropertysg.com/sitemap.xml" />
+<script defer src="/assets/schema-generator.js"></script>
 
-<!-- JSON-LD: Blog Collection Page -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "@id": "https://freepropertysg.com/blog/#collection",
-  "name": "FreePropertySG Blog",
-  "url": "https://freepropertysg.com/blog",
-  "description": "Singapore property blog featuring free insights on HDB, condo, rental, renovation, market trends and investment tips.",
-  "isPartOf": {
-    "@id": "https://freepropertysg.com/#website"
-  }
+<style>
+/* REMOVE BULLETS — ONLY CHANGE MADE */
+.blog-list {
+  list-style: none;
+  padding-left: 0;
 }
-</script>
-
-<!-- Website Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://freepropertysg.com/#website",
-  "url": "https://freepropertysg.com",
-  "name": "FreePropertySG"
-}
-</script>
-
-<!-- Breadcrumbs -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://freepropertysg.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Blog",
-      "item": "https://freepropertysg.com/blog/"
-    }
-  ]
-}
-</script>
+</style>
 
 </head>
 
 <body>
 
-<!-- NAVIGATION (same as homepage) -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="/" class="nav-logo">FreePropertySG</a>
-    <span class="menu-toggle">☰</span>
-    <ul class="nav-menu">
-      <li><a href="/">HOME</a></li>
-      <li><a href="/about">ABOUT</a></li>
-      <li><a href="/listings">LISTINGS</a></li>
-      <li><a href="/blog">BLOG</a></li>
-      <li><a href="/contact">CONTACT</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- ACTIVE LINK SCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const current = window.location.pathname.replace(/\/$/, "");
-  const links = document.querySelectorAll(".nav-menu a");
-
-  links.forEach(link => {
-    const linkPath = link.getAttribute("href").replace(/\/$/, "");
-    if (linkPath === current) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
-
+<!-- NAVIGATION (CENTRALISED) -->
+<div id="site-nav"></div>
+<script src="/assets/header.js"></script>
+  
 <!-- MAIN SECTION -->
 <main>
 
-<header class="hero">
-  <h1>FreePropertySG Blog</h1>
-  <p>Free property market insights — HDB, Condo, Landed, Rental, Renovation & Investment Guides.</p>
-  <p><strong>Got a topic request? Email us: info@freepropertysg.com</strong></p>
-</header>
+<!-- HERO (CENTRALISED) -->
+<div id="hero"></div>
+<script src="/assets/hero.js"></script>
 
 <div class="content-container">
 
 <h2>Blog Categories</h2>
 
-<!-- CATEGORY: HDB -->
+<!-- CATEGORY: Property Blog & Insights -->
 <section class="blog-section">
-  <h3>🏠 HDB Guides</h3>
+  <h3>🏘️ <span class="section-number"></span> Property Blog & Insights</h3>
   <ul class="blog-list">
-    <li><a href="/blog/hdb-resale-guide.html">HDB Resale Guide</a></li>
-    <li><a href="/blog/hdb-grants-singapore.html">HDB Grants Singapore</a></li>
-    <li><a href="/blog/hdb-renovation-cost.html">HDB Renovation Cost</a></li>
-  </ul>
-</section>
-
-<!-- CATEGORY: CONDO -->
-<section class="blog-section">
-  <h3>🏢 Condo</h3>
-  <ul class="blog-list">
-    <li><a href="/blog/condo-buying-guide.html">Condo Buying Guide</a></li>
-    <li><a href="/blog/new-launch-condos.html">New Launch Condos Singapore</a></li>
-  </ul>
-</section>
-
-<!-- CATEGORY: RENTAL -->
-<section class="blog-section">
-  <h3>🔑 Rental</h3>
-  <ul class="blog-list">
-    <li><a href="/blog/tenant-guide-singapore.html">Tenant Guide Singapore</a></li>
-    <li><a href="/blog/landlord-guide-singapore.html">Landlord Guide Singapore</a></li>
-    <li><a href="/blog/rental-market-singapore.html">Rental Market Singapore</a></li>
+    <li><a href="/blog/parc-clematis">Parc Clematis</a></li>
+    <li><a href="/blog/high-park-residences">High Park Residences</a></li>
+    <li><a href="/blog/the-trilinq">The Trilinq</a></li>
   </ul>
 </section>
 
 <!-- CATEGORY: INVESTMENT -->
 <section class="blog-section">
-  <h3>📈 Property Investment</h3>
+  <h3>📈 <span class="section-number"></span> Property Investment</h3>
   <ul class="blog-list">
-    <li><a href="/blog/property-yield-singapore.html">Property Rental Yield Singapore</a></li>
-    <li><a href="/blog/absd-rules.html">ABSD Rules Singapore</a></li>
-    <li><a href="/blog/property-investment-beginners.html">Property Investment for Beginners</a></li>
+    <li><a href="/blog/rental-yield-calculator-singapore">Rental Yield Calculator Singapore</a></li>
+    <li><a href="/blog/absd-singapore">ABSD Singapore</a></li>
+    <li><a href="/blog/real-estate-investment-singapore">Real Estate Investment Singapore</a></li>
   </ul>
 </section>
 
 <!-- CATEGORY: RENOVATION -->
 <section class="blog-section">
-  <h3>🧱 Renovation</h3>
+  <h3>🧱 <span class="section-number"></span> Renovation</h3>
   <ul class="blog-list">
-    <li><a href="/blog/kitchen-renovation-singapore.html">Kitchen Renovation Singapore</a></li>
-    <li><a href="/blog/toilet-renovation-cost.html">Toilet Renovation Cost</a></li>
+    <li><a href="/blog/toilet-renovation-package">Toilet Renovation Package</a></li>
+    <li><a href="/blog/kitchen-renovation-package-price">Kitchen Renovation Package Price</a></li>
   </ul>
 </section>
 
 <!-- CATEGORY: TIPS -->
 <section class="blog-section">
-  <h3>💡 Property Tips</h3>
+  <h3>💡 <span class="section-number"></span> Property Tips</h3>
   <ul class="blog-list">
-    <li><a href="/blog/property-agent-fees.html">Property Agent Fees Singapore</a></li>
-    <li><a href="/blog/how-to-price-your-property.html">How to Price Your Property</a></li>
+    <li><a href="/blog/property-agent-commission">Property Agent Commission</a></li>
+    <li><a href="/blog/srx-x-value">SRX X-Value</a></li>
   </ul>
 </section>
 
 </div>
 
 </main>
-
+  
+<!-- Global Ads & Analytics -->
+<div id="site-ad"></div>
+<script src="/assets/scripts.js"></script>
+  
 <!-- FOOTER -->
-<footer id="site-footer"></footer>
-<script>
-fetch("/assets/footer.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("site-footer").innerHTML = html;
-  });
-</script>
+<div id="site-footer"></div>
+<script src="/assets/footer.js"></script>
 
-<!-- MOBILE MENU SCRIPT -->
+<!-- AUTO NUMBERING SCRIPT -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".nav-menu");
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".blog-section");
 
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("show");
+  sections.forEach((section, sectionIndex) => {
+    const sectionNumber = sectionIndex + 1;
+
+    // Insert section number
+    const span = section.querySelector(".section-number");
+    if (span) span.textContent = sectionNumber + ". ";
+
+    // Auto-number posts inside each section
+    const posts = section.querySelectorAll("ul.blog-list li a");
+
+    posts.forEach((post, postIndex) => {
+      const postNumber = `${sectionNumber}.${postIndex + 1} `;
+
+      // Prevent double numbering if script runs again
+      if (!post.textContent.match(/^\d+\.\d+/)) {
+        post.textContent = postNumber + post.textContent;
+      }
+    });
   });
 });
 </script>
