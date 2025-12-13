@@ -31,34 +31,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://postfreesg.com/blog/euhabitat</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://postfreesg.com/blog/high-park-residences</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://postfreesg.com/blog/one-shenton</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://postfreesg.com/blog/parc-clematis</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://postfreesg.com/blog/the-florence-residences</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
 </urlset>
