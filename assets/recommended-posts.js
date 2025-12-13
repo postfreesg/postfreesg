@@ -123,10 +123,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const html = await res.text();
       const doc = new DOMParser().parseFromString(html, "text/html");
 
-      const posts = [...doc.querySelectorAll("a[href^='/blog/']")].map(a => ({
-        title: a.textContent.trim(),
-        url: ("https://postfreesg.com" + a.getAttribute("href")).replace(/\/$/, "")
-      }));
+      const posts = [...doc.querySelectorAll("a[href*='/blog/']")]
+        .map(a => ({
+          title: a.textContent.trim(),
+          url: a.href.replace(/\/$/, "")
+        }))
+        .filter(p => !p.url.endsWith("/blog")); // exclude blog index
 
       const currentURL = window.location.href.replace(/\/$/, "");
 
