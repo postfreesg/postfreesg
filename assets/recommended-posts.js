@@ -7,23 +7,27 @@ document.addEventListener("DOMContentLoaded", () => {
      1. Inject CSS dynamically
   ---------------------------------------- */
   const css = `
-    .recommended-posts-section {
+    .recommended-posts-section,
+    .faq-section {
       margin-top: 2rem;
       margin-bottom: 2rem;
       padding: 0 !important;
     }
-    .recommended-posts-section h2 {
+
+    .recommended-posts-section h2,
+    .faq-section h2 {
       font-size: 1.6rem;
       margin-bottom: 1rem;
-      margin-top: 0;
       color: #212529;
       font-weight: 700;
     }
+
     .recommended-posts-container {
       display: flex;
       flex-direction: column;
       gap: 1.2rem;
     }
+
     .reco-post-link {
       text-decoration: none;
       color: #000;
@@ -31,8 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
       display: block;
       transition: color 0.2s ease;
     }
+
     .reco-post-link:hover {
       color: #ff6a00;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 0.3rem;
     }
   `;
 
@@ -41,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.head.appendChild(styleTag);
 
   /* ---------------------------------------
-     2. Build Recommended Posts HTML
+     2. Recommended Posts HTML
   ---------------------------------------- */
   const recommendedHTML = `
     <section class="recommended-posts-section">
@@ -51,32 +65,64 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
 
   /* ---------------------------------------
-     3. Insert inside placeholder if exists
+     3. FAQ HTML (STATIC, SEO-SAFE)
+  ---------------------------------------- */
+  const faqHTML = `
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <strong>Is PostFreeSG free to use?</strong>
+        <p>Yes. PostFreeSG is completely free to use. You can post and browse classified listings in Singapore without any platform fees or subscriptions.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Who can use PostFreeSG?</strong>
+        <p>PostFreeSG is open to everyone, including individuals, freelancers, small businesses, property owners, and service providers in Singapore.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>What types of listings are allowed on PostFreeSG?</strong>
+        <p>PostFreeSG allows a wide range of listings such as jobs, services, property, rentals, items for sale, and other general classified advertisements.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Do I need to create an account to post listings?</strong>
+        <p>No account registration is required. PostFreeSG is designed to keep posting simple and accessible for all users.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>How can I share my feedback or suggestions with PostFreeSG?</strong>
+        <p>To share feedback or suggestions with PostFreeSG, you can email our team at <strong>info@PostFreeSG.com</strong> so we can continue improving the platform for users.</p>
+      </div>
+    </section>
+  `;
+
+  /* ---------------------------------------
+     4. Insert Recommended + FAQ
   ---------------------------------------- */
   const placeholder = document.getElementById("recommended-posts");
 
   if (placeholder) {
-    placeholder.insertAdjacentHTML("beforeend", recommendedHTML);
+    placeholder.insertAdjacentHTML("beforeend", recommendedHTML + faqHTML);
   } else {
     const footer = document.querySelector("#site-footer");
     if (footer) {
-      footer.insertAdjacentHTML("beforebegin", recommendedHTML);
+      footer.insertAdjacentHTML("beforebegin", recommendedHTML + faqHTML);
     } else {
-      document.body.insertAdjacentHTML("beforeend", recommendedHTML);
+      document.body.insertAdjacentHTML("beforeend", recommendedHTML + faqHTML);
     }
   }
 
   /* ---------------------------------------
-     4. Fetch blog index & auto-generate list
+     5. Fetch blog index & generate posts
   ---------------------------------------- */
   (async function () {
     try {
-      // UPDATED — fetch from PostFreeSG
       const res = await fetch("https://postfreesg.com/blog/");
       const html = await res.text();
       const doc = new DOMParser().parseFromString(html, "text/html");
 
-      // Extract blog links
       const posts = [...doc.querySelectorAll("a[href^='/blog/']")].map(a => ({
         title: a.textContent.trim(),
         url: ("https://postfreesg.com" + a.getAttribute("href")).replace(/\/$/, "")
@@ -84,12 +130,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const currentURL = window.location.href.replace(/\/$/, "");
 
-      // Remove current page + duplicates
       const unique = posts
         .filter(p => p.url !== currentURL)
         .filter((v, i, self) => i === self.findIndex(t => t.url === v.url));
 
-      // Select 3 random recommended posts
       const selected = unique.sort(() => Math.random() - 0.5).slice(0, 3);
 
       const box = document.getElementById("recommendedContainer");
