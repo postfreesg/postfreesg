@@ -93,7 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <div class="faq-item">
         <strong>How can I share my feedback or suggestions with PostFreeSG?</strong>
-        <p>To share feedback or suggestions with PostFreeSG, you can email our team at <strong>info@PostFreeSG.com</strong> so we can continue improving the platform for users.</p>
+        <p>To share feedback or suggestions with PostFreeSG, you can email our team at
+        <a href="mailto:info@PostFreeSG.com"><strong>info@PostFreeSG.com</strong></a>
+        so we can continue improving the platform for users.</p>
       </div>
     </section>
   `;
