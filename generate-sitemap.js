@@ -22,10 +22,10 @@ let urls = [];
 // === STATIC PAGES ===
 urls.push(
   urlBlock(`${SITE_URL}/`, "1.0", "weekly", "2025-01-01"),
-  urlBlock(`${SITE_URL}/about/`, "0.8", "monthly", "2025-01-01"),
+  urlBlock(`${SITE_URL}/about/`, "0.6", "monthly", "2025-01-01"),
   urlBlock(`${SITE_URL}/listings/`, "0.9", "daily", "2025-01-01"),
   urlBlock(`${SITE_URL}/blog/`, "0.7", "weekly", "2025-01-01"),
-  urlBlock(`${SITE_URL}/contact/`, "0.6", "monthly", "2025-01-01")
+  urlBlock(`${SITE_URL}/contact/`, "0.5", "monthly", "2025-01-01")
 );
 
 // === BLOG POSTS ===
