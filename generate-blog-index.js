@@ -1,3 +1,4 @@
+
 const fs = require("fs");
 
 const BLOG_DIR = "./blog";
@@ -19,11 +20,9 @@ const posts = fs.readdirSync(BLOG_DIR)
 
 const list = posts.map(file => {
   const slug = file.replace(".html", "");
-  const title = slug
-    .replace(/-/g, " ")
+  const title = slug.replace(/-/g, " ")
     .replace(/\b\w/g, c => c.toUpperCase());
-
-  return `  <li><a href="https://postfreesg.com/blog/${file}">${title}</a></li>`;
+  return `  <li><a href="/blog/${slug}">${title}</a></li>`;
 }).join("\n");
 
 const updated = html.replace(
