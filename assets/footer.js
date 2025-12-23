@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <footer style="text-align:center; font-size:0.9rem;">
   <p style="margin:0.2rem 0;">
     © <span id="copyYear"></span> PostFreeSG — Singapore’s Free Classifieds Platform |
-      <a href="https://freepropertysg.com/privacy-policy"
+      <a href="https://postfreesg.com/privacy-policy"
    style="text-decoration:none; color:inherit;"
    onmouseover="this.style.color='#ff6a00'"
    onmouseout="this.style.color='inherit'">
@@ -61,4 +61,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
 
