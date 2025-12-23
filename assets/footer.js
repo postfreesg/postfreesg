@@ -3,7 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerHTML = `
 <footer style="text-align:center; font-size:0.9rem;">
   <p style="margin:0.2rem 0;">
-    © <span id="copyYear"></span> PostFreeSG — Singapore’s Free Classifieds Platform
+    © <span id="copyYear"></span> PostFreeSG — Singapore’s Free Classifieds Platform |
+      <a href="https://freepropertysg.com/privacy-policy"
+   style="text-decoration:none; color:inherit;"
+   onmouseover="this.style.color='#ff6a00'"
+   onmouseout="this.style.color='inherit'">
+  Privacy Policy</a>
   </p>
   
   <p style="margin:0.2rem 0;">
@@ -45,4 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("site-footer").innerHTML = footerHTML;
 
+  const updatedEl = document.getElementById("lastUpdated");
+  if (updatedEl) {
+    const disclaimer = document.createElement("small");
+    disclaimer.className = "disclaimer";
+    disclaimer.textContent = "Disclaimer: This page contains sponsored ads.";
+    disclaimer.style.display = "block";
+    disclaimer.style.marginTop = "0.2rem";
+    updatedEl.insertAdjacentElement("afterend", disclaimer);
+  }
+
 });
+
